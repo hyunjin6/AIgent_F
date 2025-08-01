@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>정책자금, 누군가는 받는다는데… 왜 나는 늘 놓칠까?</title>
+    <title>MyBiz Navi - 소상공인과 중소기업 사장님을 위한 맞춤형 정책자금 발견 플랫폼</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F80GNY9V5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3F80GNY9V5');
+    </script>
+    
+    <!-- Hotjar Tracking Code for test -->
+    <script>
+    (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:6481473,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <style>
         * {
             margin: 0;
@@ -12,71 +34,179 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background-color: #ffffff;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         .section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
+        /* Header Section */
+        .header {
+            background: white;
+            padding: 20px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+
+        .dashboard-preview {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            min-width: 200px;
+        }
+
+        .dashboard-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: #10b981;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
             padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
+            font-size: 1.4rem;
+            margin-bottom: 48px;
+            opacity: 0.95;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
             display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 8px;
+            background: #fbbf24;
+            color: #1a1a1a;
+            padding: 18px 36px;
+            border-radius: 12px;
             text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
+            font-weight: 700;
+            transition: all 0.3s ease;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
         }
 
         .btn:hover {
-            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(251, 191, 36, 0.4);
         }
 
-        .btn-large {
-            padding: 18px 36px;
-            font-size: 1.1rem;
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
         }
 
         .section-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 30px;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 40px;
             text-align: center;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
         }
 
+        /* Problem Section */
         .problem-section {
             background: #f8fafc;
         }
@@ -88,95 +218,244 @@
         }
 
         .problem-content p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            color: #4b5563;
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            color: #4a5568;
+            line-height: 1.8;
         }
 
-        .stats {
-            background: #3b82f6;
-            color: white;
-            padding: 20px;
+        .problem-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .problem-card {
+            background: white;
+            padding: 32px;
             border-radius: 12px;
-            margin: 30px 0;
-            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #ef4444;
+            text-align: left;
         }
 
+        .problem-card:nth-child(2) {
+            border-left-color: #f59e0b;
+        }
+
+        .problem-card:nth-child(3) {
+            border-left-color: #10b981;
+        }
+
+        .problem-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .problem-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Features Section */
         .features {
             background: white;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
 
         .feature-card {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid #f1f5f9;
+            position: relative;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 16px 16px 0 0;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
 
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 3.5rem;
+            margin-bottom: 24px;
         }
 
         .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #1f2937;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+            font-weight: 700;
         }
 
         .feature-card p {
-            color: #6b7280;
-            line-height: 1.6;
+            color: #64748b;
+            line-height: 1.7;
+            font-size: 1.1rem;
         }
 
+        /* Testimonials Section */
         .testimonials {
             background: #f8fafc;
         }
 
+        .testimonials-title {
+            color: #10b981;
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
         .testimonial-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
         }
 
         .testimonial-card {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #f1f5f9;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-content {
+            flex: 1;
+        }
+
+        .testimonial-header {
+            margin-bottom: 12px;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            color: #1a1a1a;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-details {
+            color: #64748b;
+            font-size: 0.9rem;
+            margin-top: 4px;
         }
 
         .testimonial-text {
             font-style: italic;
-            color: #4b5563;
-            margin-bottom: 20px;
-            border-left: 4px solid #3b82f6;
-            padding-left: 20px;
+            color: #4a5568;
+            line-height: 1.7;
+            font-size: 1rem;
+            border-left: 3px solid;
+            padding-left: 16px;
         }
 
-        .testimonial-author {
-            font-weight: 600;
-            color: #1f2937;
+        .testimonial-card:nth-child(1) .testimonial-avatar {
+            background: #ec4899;
+        }
+        .testimonial-card:nth-child(1) .testimonial-text {
+            border-left-color: #ec4899;
         }
 
+        .testimonial-card:nth-child(2) .testimonial-avatar {
+            background: #3b82f6;
+        }
+        .testimonial-card:nth-child(2) .testimonial-text {
+            border-left-color: #3b82f6;
+        }
+
+        .testimonial-card:nth-child(3) .testimonial-avatar {
+            background: #10b981;
+        }
+        .testimonial-card:nth-child(3) .testimonial-text {
+            border-left-color: #10b981;
+        }
+
+        .testimonial-card:nth-child(4) .testimonial-avatar {
+            background: #f59e0b;
+        }
+        .testimonial-card:nth-child(4) .testimonial-text {
+            border-left-color: #f59e0b;
+        }
+
+        /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            color: white;
+            background: white;
             text-align: center;
         }
 
         .cta-content {
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .benefit-boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 40px 0;
+        }
+
+        .benefit-box {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+            color: #1a1a1a;
+        }
+
+        .benefit-icon {
+            color: #f59e0b;
+            font-size: 1.2rem;
         }
 
         .cta-buttons {
@@ -189,24 +468,27 @@
 
         .trust-note {
             margin-top: 40px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            font-size: 0.9rem;
-            opacity: 0.9;
+            padding: 24px;
+            background: #fef3c7;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: #92400e;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
         .form-container {
             max-width: 500px;
             margin: 40px auto;
             background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 48px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .form-group label {
@@ -214,50 +496,51 @@
             margin-bottom: 8px;
             font-weight: 600;
             color: #374151;
+            font-size: 1rem;
         }
 
         .form-group input {
             width: 100%;
-            padding: 12px;
+            padding: 16px;
             border: 2px solid #e5e7eb;
-            border-radius: 8px;
+            border-radius: 12px;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: all 0.3s ease;
+            background: #f9fafb;
         }
 
         .form-group input:focus {
             outline: none;
-            border-color: #3b82f6;
-        }
-
-        .success-rate {
-            background: #10b981;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
-            font-weight: 600;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
 
         @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .hero p {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             .section-title {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
 
             .section {
-                padding: 60px 0;
+                padding: 80px 0;
             }
 
             .hero {
-                padding: 80px 0;
+                padding: 100px 0;
             }
 
             .cta-buttons {
@@ -271,18 +554,56 @@
             }
 
             .container {
-                padding: 0 15px;
+                padding: 0 20px;
+            }
+
+            .form-container {
+                padding: 32px 24px;
+            }
+
+            .problem-cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <section class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo-icon">M</div>
+                    <div>
+                        <div class="logo-text">MyBiz Navi</div>
+                        <div class="tagline">정책자금 정보, 이제 독특하게 찾으세요</div>
+                    </div>
+                </div>
+                <div class="dashboard-preview">
+                    <div>📊 실시간 통계</div>
+                    <div class="dashboard-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">150+</div>
+                            <div class="stat-label">정책</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">만족도</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section (A - Attention) -->
     <section class="hero">
         <div class="container">
-            <h1>정책자금, 누군가는 받는다는데… 왜 나는 늘 놓칠까?</h1>
-            <p>유사 조건 수혜 사례와 실제 후기 기반 커뮤니티에서<br>지금, 당신의 정책자금 기회를 놓치지 마세요.</p>
-            <a href="#cta" class="btn btn-large">🔔 알림 신청하고 내 조건 맞는 사례 먼저 받아보기</a>
+            <div class="hero-content">
+                <h1>정책자금, 누군가는 받는다는데…<br>왜 나는 늘 놓칠까?</h1>
+                <p>유사 조건 수혜 사례와 실제 후기 기반 커뮤니티에서<br>지금, 당신의 정책자금 기회를 놓치지 마세요.</p>
+                <a href="#cta" class="btn">🔔 알림 신청하고 내 조건 맞는 사례 먼저 받아보기</a>
+            </div>
         </div>
     </section>
 
@@ -291,12 +612,22 @@
         <div class="container">
             <div class="problem-content">
                 <h2 class="section-title">정보는 넘치는데, 정작 '나한테 맞는 정책'은 모르겠다?</h2>
-                <p>정부24, 기업마당, 지자체 홈페이지… 수많은 곳을 뒤져도<br>신청할 수 있는 정책인지 아닌지조차 헷갈립니다.</p>
-                <p>결국 주변 사람 이야기나 유튜브 후기만 검색하다<br>신청 타이밍을 놓치고 맙니다.</p>
-                <p>그 사이, 누군가는 조용히 정책자금을 받고 있습니다.</p>
-                <div class="stats">
-                    📊 80% 이상이 정책자금 정보 탐색에서 '좌절'을 경험합니다.<br>
-                    그 중 절반 이상은 '정보의 파편성'이 가장 큰 이유였습니다.
+                <div class="problem-cards">
+                    <div class="problem-card">
+                        <div class="problem-icon">🔍</div>
+                        <h3>정보 탐색의 어려움</h3>
+                        <p>정부24, 기업마당, 지자체 홈페이지… 수많은 곳을 뒤져도 신청할 수 있는 정책인지 아닌지조차 헷갈립니다.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">⏰</div>
+                        <h3>타이밍 놓침</h3>
+                        <p>결국 주변 사람 이야기나 유튜브 후기만 검색하다 신청 타이밍을 놓치고 맙니다.</p>
+                    </div>
+                    <div class="problem-card">
+                        <div class="problem-icon">😔</div>
+                        <h3>기회 상실</h3>
+                        <p>그 사이, 누군가는 조용히 정책자금을 받고 있습니다.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -309,17 +640,17 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">📌</div>
-                    <h3>01. 조건 기반 추천</h3>
-                    <p>업종/업력/지역을 입력하면, "나와 비슷한 조건의 사람들"이 받은 정책을 보여드립니다.</p>
+                    <h3>조건 기반 추천</h3>
+                    <p>나이/업종/업력/지역을 입력하면, "나와 비슷한 조건의 사람들"이 받은 정책을 보여드립니다.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🧾</div>
-                    <h3>02. 유사 수혜 사례 카드</h3>
+                    <h3>유사 수혜 사례 카드</h3>
                     <p>실제 신청자의 간단한 후기와 조건, 팁까지 요약된 카드로 확인 → 신청 여부 결정까지 단 2분</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💬</div>
-                    <h3>03. 커뮤니티 질문 & 후기 공유</h3>
+                    <h3>커뮤니티 질문 & 후기 공유</h3>
                     <p>헷갈릴 땐 직접 물어보고, 신청 후엔 본인의 경험을 공유하는 서로 돕는 구조</p>
                 </div>
             </div>
@@ -329,23 +660,56 @@
     <!-- Testimonials Section (D - 강화된 Desire) -->
     <section class="section testimonials">
         <div class="container">
-            <h2 class="section-title">"이걸 보고 2시간 만에 정책자금 신청했어요"</h2>
+            <h2 class="testimonials-title">💬 MyBiz Navi로 정말 받았어요!</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "조건도 애매해서 헷갈렸는데, 저랑 비슷한 케이스를 보자마자 바로 정리했어요."
+                    <div class="testimonial-avatar">김</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-header">
+                            <div class="testimonial-name">김OO (30대/미용업)</div>
+                            <div class="testimonial-details">1년차 • 연매출 9천만원</div>
+                        </div>
+                        <div class="testimonial-text">
+                            "비슷한 조건의 사례를 보니 나도 받을 수 있겠다는 확신이 생겼어요. 덕분에 정책자금 신청 완료했습니다!"
+                        </div>
                     </div>
-                    <div class="testimonial-author">👩‍🦰 예비 창업자, 30대 여성 / 소매업 준비 중</div>
                 </div>
                 <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        "업종/지역 조건 맞춰 필터링 하니까 더이상 헤맬 필요가 없었어요. 덕분에 올해 첫 정책자금 신청 성공했습니다."
+                    <div class="testimonial-avatar">박</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-header">
+                            <div class="testimonial-name">박OO (40대/제조업)</div>
+                            <div class="testimonial-details">6년차 • 연매출 2.5억</div>
+                        </div>
+                        <div class="testimonial-text">
+                            "이전에 한번 떨어진 경험이 있는데, 실패 후 성공 사례를 보고 재신청할 용기를 얻었습니다."
+                        </div>
                     </div>
-                    <div class="testimonial-author">👨‍🔧 자영업 6년 차 / 카페 운영</div>
                 </div>
-            </div>
-            <div class="success-rate">
-                사례를 본 사용자 중 63%가 "신청을 시도해볼 의향이 생겼다"고 답했습니다.
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">이</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-header">
+                            <div class="testimonial-name">이OO (30대/예비창업자)</div>
+                            <div class="testimonial-details">창업 준비 중</div>
+                        </div>
+                        <div class="testimonial-text">
+                            "커뮤니티에서 창업 전 알아야 할 정책자금에 대한 조언을 많이 얻을 수 있어 좋았습니다."
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">최</div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-header">
+                            <div class="testimonial-name">최OO (30대/서비스업)</div>
+                            <div class="testimonial-details">3년차 • 연매출 1.2억</div>
+                        </div>
+                        <div class="testimonial-text">
+                            "복잡한 정책자금 정보를 한 번에 비교할 수 있어서 시간을 많이 절약했어요."
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -355,25 +719,31 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="section-title">내 조건에 맞는 정책자금 사례, 놓치지 마세요.</h2>
-                <p>매달 50개 넘는 정책자금이 새로 열립니다.<br>알림 신청만 해도, 당신에게 맞는 사례가 먼저 도착합니다.</p>
                 
+                <div class="benefit-boxes">
+                    <div class="benefit-box">
+                        <span class="benefit-icon">⭐</span>
+                        <span>매달 50개 넘는 정책자금이 새로 열립니다.</span>
+                    </div>
+                    <div class="benefit-box">
+                        <span class="benefit-icon">⭐</span>
+                        <span>알림 신청만 해도, 당신에게 맞는 사례가 먼저 도착합니다.</span>
+                    </div>
+                </div>
+
                 <div class="form-container">
                     <form action="https://formspree.io/f/movllzwb" method="POST">
                         <div class="form-group">
                             <label for="email">이메일 주소</label>
                             <input type="email" id="email" name="email" required placeholder="your@email.com">
                         </div>
-                        <button type="submit" class="btn btn-large" style="width: 100%;">📩 내 조건 맞춤 사례 먼저 받아보기</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">📩 내 조건 맞춤 사례 먼저 받아보기</button>
                     </form>
                 </div>
 
-                <div class="cta-buttons">
-                    <a href="#cta" class="btn btn-large">🔍 알림 설정하고 신청 타이밍 챙기기</a>
-                </div>
-
                 <div class="trust-note">
-                    💡 본 서비스는 실제 정책자금 수혜자의 후기와 공공 데이터를 기반으로 운영됩니다.<br>
-                    사용자의 개인정보는 저장되지 않으며, 언제든지 알림 해제할 수 있습니다.
+                    <span>💡</span>
+                    <span>본 서비스는 실제 정책자금 수혜자의 후기와 공공 데이터를 기반으로 운영됩니다. 사용자의 개인정보는 저장되지 않으며, 언제든지 알림 해제할 수 있습니다.</span>
                 </div>
             </div>
         </div>
