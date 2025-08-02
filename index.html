@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyBiz Navi - 소상공인과 중소기업 사장님을 위한 맞춤형 정책자금 발견 플랫폼</title>
-    
+    <title>MyBiz Navi - 정책자금, 누군가는 받는다는데… 왜 나는 늘 놓칠까?</title>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3F80GNY9V5"></script>
     <script>
@@ -467,12 +467,47 @@
             background: #2980b9;
         }
 
-        .trust-text {
-            text-align: center;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-            margin-top: 30px;
-        }
+                 .trust-text {
+             text-align: center;
+             color: #7f8c8d;
+             font-size: 0.9rem;
+             margin-top: 30px;
+         }
+
+         /* Beta Footer */
+         .beta-footer {
+             background: #f8f9fa;
+             border-top: 1px solid #e9ecef;
+             padding: 20px 0;
+             margin-top: 40px;
+         }
+
+         .beta-content {
+             text-align: center;
+         }
+
+         .beta-notice {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             gap: 10px;
+             flex-wrap: wrap;
+         }
+
+         .beta-badge {
+             background: #ff6b6b;
+             color: white;
+             padding: 4px 8px;
+             border-radius: 4px;
+             font-size: 0.7rem;
+             font-weight: 600;
+             letter-spacing: 0.5px;
+         }
+
+         .beta-text {
+             color: #666;
+             font-size: 0.9rem;
+         }
 
         /* Scroll Animation */
         .fade-in {
@@ -532,17 +567,27 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
+                 @media (max-width: 768px) {
+             .header-content {
+                 flex-direction: row;
+                 justify-content: space-between;
+                 align-items: center;
+             }
 
-            .stats-card {
-                min-width: auto;
-                width: 100%;
-                max-width: 300px;
-            }
+             .stats-card {
+                 min-width: auto;
+                 width: auto;
+                 max-width: 180px;
+                 padding: 15px;
+             }
+
+             .stats-number {
+                 font-size: 1.4rem;
+             }
+
+             .stats-title {
+                 font-size: 0.8rem;
+             }
 
             .hero h1 {
                 font-size: 2rem;
@@ -582,19 +627,29 @@
             }
         }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
+                 @media (max-width: 480px) {
+             .header-content {
+                 flex-direction: column;
+                 gap: 15px;
+             }
 
-            .section-title {
-                font-size: 1.5rem;
-            }
+             .stats-card {
+                 max-width: 100%;
+                 width: 100%;
+             }
 
-            .email-form {
-                padding: 30px 20px;
-            }
-        }
+             .hero h1 {
+                 font-size: 1.8rem;
+             }
+
+             .section-title {
+                 font-size: 1.5rem;
+             }
+
+             .email-form {
+                 padding: 30px 20px;
+             }
+         }
     </style>
 </head>
 <body>
@@ -790,10 +845,25 @@
                     </form>
                 </div>
 
-                <div class="trust-text fade-in stagger-delay-3">
-                    💡 본 서비스는 실제 정책자금 수혜자의 후기와 공공 데이터를 기반으로 운영됩니다.<br>
-                    사용자의 개인정보는 저장되지 않으며, 언제든지 알림 해제할 수 있습니다.
-                </div>
+                                 <div class="trust-text fade-in stagger-delay-3">
+                     💡 본 서비스는 실제 정책자금 수혜자의 후기와 공공 데이터를 기반으로 운영됩니다.<br>
+                     사용자의 개인정보는 저장되지 않으며, 언제든지 알림 해제할 수 있습니다.
+                 </div>
+             </div>
+         </div>
+     </section>
+
+     <!-- Beta Test Notice -->
+     <footer class="beta-footer">
+         <div class="container">
+             <div class="beta-content">
+                 <div class="beta-notice">
+                     <span class="beta-badge">BETA</span>
+                     <span class="beta-text">베타테스트 버전입니다. Contact us: keundols71@gmail.com</span>
+                 </div>
+             </div>
+         </div>
+     </footer>
             </div>
         </div>
     </section>
